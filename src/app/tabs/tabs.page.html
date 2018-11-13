@@ -1,32 +1,41 @@
 <ion-tabs>
 
-  <ion-tab tab="home">
-    <ion-router-outlet name="home"></ion-router-outlet>
+  <ion-tab tab="work">
+    <ion-router-outlet name="work"></ion-router-outlet>
   </ion-tab>
-  <ion-tab tab="about">
-    <ion-router-outlet name="about"></ion-router-outlet>
+  <ion-tab tab="message">
+    <ion-router-outlet name="message"></ion-router-outlet>
   </ion-tab>
-  <ion-tab tab="contact">
-    <ion-router-outlet name="contact"></ion-router-outlet>
+  <ion-tab tab="file">
+    <ion-router-outlet name="file"></ion-router-outlet>
   </ion-tab>
+  <ion-tab tab="user">
+    <ion-router-outlet name="user"></ion-router-outlet>
+  </ion-tab>
+
 
   <ion-tab-bar slot="bottom">
 
-    <ion-tab-button tab="home" href="/tabs/(home:home)">
-      <ion-icon name="home"></ion-icon>
-      <ion-label>Home</ion-label>
+    <ion-tab-button tab="work" href="/tabs/(work:work)">
+      <ion-icon name="medkit"></ion-icon>
+      <ion-label>医院工作</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="about" href="/tabs/(about:about)">
-      <ion-icon name="information-circle"></ion-icon>
-      <ion-label>About</ion-label>
+    <ion-tab-button tab="message" href="/tabs/(message:message)">
+      <ion-icon name="chatbubbles"></ion-icon>
+      <ion-label>消息管理</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="contact" href="/tabs/(contact:contact)">
-      <ion-icon name="contacts"></ion-icon>
-      <ion-label>Contact</ion-label>
+    <ion-tab-button tab="file" href="/tabs/(file:file)">
+      <ion-icon name="document"></ion-icon>
+      <ion-label>我的文件</ion-label>
     </ion-tab-button>
 
+    <!-- outlet:path -->
+    <ion-tab-button tab="user" href="/tabs/(user:user)">
+      <ion-icon name="contact"></ion-icon>
+      <ion-label>个人中心</ion-label>
+    </ion-tab-button>
   </ion-tab-bar>
 
 </ion-tabs>

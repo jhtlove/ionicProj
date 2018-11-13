@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
-import { HomePage } from '../home/home.page';
-import { AboutPage } from '../about/about.page';
-import { ContactPage } from '../contact/contact.page';
+import { WorkPage } from '../work/work.page';
+import { MessagePage } from '../message/message.page';
+import { FilePage } from '../file/file.page';
+import { UserPage } from '../user/user.page';
+
 
 const routes: Routes = [
   {
@@ -13,29 +15,34 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/tabs/(home:home)',
+        redirectTo: '/tabs/(work:work)',
         pathMatch: 'full',
       },
       {
-        path: 'home',
-        outlet: 'home',
-        component: HomePage
+        path: 'work',
+        outlet: 'work',
+        component: WorkPage
       },
       {
-        path: 'about',
-        outlet: 'about',
-        component: AboutPage
+        path: 'message',
+        outlet: 'message',
+        component: MessagePage
       },
       {
-        path: 'contact',
-        outlet: 'contact',
-        component: ContactPage
+        path: 'file',
+        outlet: 'file',
+        component: FilePage
+      },
+      {
+        path: 'user',
+        outlet: 'user',  // name
+        component: UserPage
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/(home:home)',
+    redirectTo: '/tabs/(work:work)',
     pathMatch: 'full'
   }
 ];

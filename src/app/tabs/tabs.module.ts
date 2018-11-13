@@ -7,9 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { TabsPageRoutingModule } from './tabs.router.module';
 
 import { TabsPage } from './tabs.page';
-import { ContactPageModule } from '../contact/contact.module';
-import { AboutPageModule } from '../about/about.module';
-import { HomePageModule } from '../home/home.module';
+import { WorkPageModule } from '../work/work.module';
+import { UserPageModule } from '../user/user.module';
+import { MessagePageModule } from '../message/message.module';
+import { FilePageModule } from '../file/file.module';
 
 @NgModule({
   imports: [
@@ -17,10 +18,11 @@ import { HomePageModule } from '../home/home.module';
     CommonModule,
     FormsModule,
     TabsPageRoutingModule,
-    HomePageModule,
-    AboutPageModule,
-    ContactPageModule
+    WorkPageModule,
+    UserPageModule,
+    MessagePageModule,
+    FilePageModule
   ],
   declarations: [TabsPage]
 })
-export class TabsPageModule {}
+export class TabsPageModule { }
